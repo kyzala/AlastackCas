@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 
-namespace WebMvc.Extensions
+namespace CasClientSample.Extensions
 {
     public static class HttpContextExtensions
     {

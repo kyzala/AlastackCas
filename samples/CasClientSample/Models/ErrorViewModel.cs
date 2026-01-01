@@ -1,4 +1,4 @@
-namespace WebMvc.Models
+namespace CasClientSample.Models
 {
     public class ErrorViewModel
     {

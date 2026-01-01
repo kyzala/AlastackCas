@@ -1,15 +1,15 @@
-# Alastack.Authentication.Cas
+# Alastack Cas
 
-A .NET client supports Central Authentication Service ([CAS](https://apereo.github.io/cas/6.6.x/protocol/CAS-Protocol.html)).
+A .NET client supports Central Authentication Service ([CAS](https://apereo.github.io/cas/7.2.x/protocol/CAS-Protocol.html)).
 
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/kyzala/AlastackAuthenticationCas/dotnet.yml?branch=main)](https://github.com/kyzala/AlastackAuthenticationCas/actions/workflows/dotnet.yml)[![GitHub](https://img.shields.io/github/license/kyzala/AlastackAuthenticationCas)](LICENSE)[![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Cas)](https://www.nuget.org/packages/Alastack.Authentication.Cas)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/kyzala/AlastackCas/dotnet.yml?branch=main)](https://github.com/kyzala/AlastackCas/actions/workflows/dotnet.yml)[![GitHub](https://img.shields.io/github/license/kyzala/AlastackCas)](LICENSE)[![Nuget](https://img.shields.io/nuget/v/Alastack.Cas)](https://www.nuget.org/packages/Alastack.Cas)
 
 ## Getting started
 
 ### Install package from the .NET CLI
 
 ```
-dotnet add package Alastack.Authentication.Cas
+dotnet add package Alastack.Cas
 ```
 
 ### Dependency Injection
@@ -62,8 +62,8 @@ Using json configuration.
 ```JSON
 {
   "CAS": {
-    "Service": "[CAS integration app uri]", //https://www.somecasservice.io
-    "Server": "[CAS service uri]", //https://www.somecasserver.io/cas
+    "Service": "[CAS integration app uri]", // https://casclientsite
+    "Server": "[CAS service uri]", // https://casserver/cas
     "ProtocolVersion": "3.0",
     "LoginPath": "/login",
     "LogoutPath": "/logout",
@@ -92,8 +92,8 @@ The `CasOptions` object provides properties that connects to the CAS server.
 | `TicketValidator`     | Checks the validity of a service ticket and returns the AuthenticationTicket. | `CompositeCasTicketValidator` |
 | `StateDataFormat`     | Gets or sets the type used to secure data handled by the middleware. | `PropertiesDataFormat`        |
 
-More information: [CAS - CAS Protocol Specification](https://apereo.github.io/cas/6.6.x/protocol/CAS-Protocol-Specification.html#)
+More information: [CAS - CAS Protocol Specification](https://apereo.github.io/cas/7.2.x/protocol/CAS-Protocol-Specification.html)
 
 ## Samples
 
-Visit the [samples](https://github.com/kyzala/AlastackAuthenticationCas/tree/main/samples) folder.
+Visit the [samples](https://github.com/kyzala/AlastackCas/tree/main/samples) folder.

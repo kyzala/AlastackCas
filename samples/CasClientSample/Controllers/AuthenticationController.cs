@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using WebMvc.Extensions;
+using CasClientSample.Extensions;
 
-namespace WebMvc.Controllers
+namespace CasClientSample.Controllers
 {
     public class AuthenticationController : Controller
     {

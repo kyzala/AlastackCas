@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WebMvc.Models;
+using CasClientSample.Models;
 
-namespace WebMvc.Controllers
+namespace CasClientSample.Controllers
 {
     public class HomeController : Controller
     {
