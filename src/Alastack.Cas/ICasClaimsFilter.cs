@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace Alastack.Authentication.Cas;
+namespace Alastack.Cas;
 
 /// <summary>
 /// An interface used to select attributes from the CAS validation response and create Claims.

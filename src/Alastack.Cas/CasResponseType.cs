@@ -1,5 +1,9 @@
-﻿namespace Alastack.Authentication.Cas;
+﻿namespace Alastack.Cas;
 
+/// <summary>
+/// Specifies the type of CAS protocol validation response.
+/// This enumeration represents the possible outcomes of a CAS validation request.
+/// </summary>
 public enum CasResponseType
 {
     /// <summary>
@@ -15,11 +19,11 @@ public enum CasResponseType
     /// </summary>
     ServiceValidate = 2,
     /// <summary>
-    /// CAS 2.0 ProxyValidate
+    /// CAS 2.0+ roxyValidate
     /// </summary>
     ProxyValidate = 3,
     /// <summary>
-    /// CAS 2.0 Proxy
+    /// CAS 2.0+ Proxy
     /// </summary>
     Proxy = 4
 

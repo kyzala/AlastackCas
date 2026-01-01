@@ -4,7 +4,7 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://www.somecasservice.io",
+      "applicationUrl": "https://www.authclientsite.io",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

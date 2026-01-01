@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 
-namespace Alastack.Authentication.Cas;
+namespace Alastack.Cas;
 
 /// <summary>
 /// Default values for CAS authentication.

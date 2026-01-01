@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.Extensions.Options;
 
-namespace Alastack.Authentication.Cas;
+namespace Alastack.Cas;
 
 /// <summary>
 /// Used to setup defaults for the CasOptions.
@@ -25,13 +25,13 @@ public class CasPostConfigureOptions : IPostConfigureOptions<CasOptions>
     /// </summary>
     /// <param name="name">The name of the CasOptions instance being configured.</param>
     /// <param name="options">The CasOptions instance to configure.</param>
-    public void PostConfigure(string name, CasOptions options)
+    public void PostConfigure(string? name, CasOptions options)
     {
         options.DataProtectionProvider ??= _dp;
 
         if (options.StateDataFormat == null)
         {
-            var dataProtector = options.DataProtectionProvider.CreateProtector(typeof(CasHandler).FullName!, name, "v1");
+            var dataProtector = options.DataProtectionProvider.CreateProtector(typeof(CasHandler).FullName!, "v1");
             options.StateDataFormat = new PropertiesDataFormat(dataProtector);
         }
 

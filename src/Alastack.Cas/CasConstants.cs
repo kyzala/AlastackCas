@@ -1,10 +1,13 @@
-﻿namespace Alastack.Authentication.Cas;
+﻿namespace Alastack.Cas;
 
 /// <summary>
 /// Contains constants specific to the <see cref="CasHandler"/>.
 /// </summary>
 public static class CasConstants
 {
+    /// <summary>
+    /// CAS Claims
+    /// </summary>
     public static class Claims
     {
         //public const string LoginName = "urn:sw:login_name";

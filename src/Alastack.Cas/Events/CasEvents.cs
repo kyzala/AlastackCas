@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 
-namespace Alastack.Authentication.Cas;
+namespace Alastack.Cas;
 
 /// <summary>
 /// Specifies events which the <see cref="CasHandler"/> invokes to enable developer control over the authentication process.

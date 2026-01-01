@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
-namespace Alastack.Authentication.Cas;
+namespace Alastack.Cas;
 
 /// <summary>
 /// The Composite implementation of <see cref="ICasTicketValidator"/>.

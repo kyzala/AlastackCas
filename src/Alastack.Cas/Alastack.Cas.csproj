@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net10.0;net8.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -12,8 +12,8 @@
 	<PackageIcon>icon.png</PackageIcon>
 	<Description>A .NET client supports Central Authentication Service (CAS).</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthenticationCas</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/kyzala/AlastackAuthenticationCas</RepositoryUrl>
+	<PackageProjectUrl>https://github.com/kyzala/AlastackCas</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/kyzala/AlastackCas</RepositoryUrl>
 	<RespositoryType>git</RespositoryType>
 	<IncludeSymbols>true</IncludeSymbols>
 	<SymbolPackageFormat>snupkg</SymbolPackageFormat>

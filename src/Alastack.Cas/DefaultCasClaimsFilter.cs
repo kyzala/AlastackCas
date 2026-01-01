@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace Alastack.Authentication.Cas;
+namespace Alastack.Cas;
 
 /// <summary>
 /// The default implementation of <see cref="ICasClaimsFilter"/>.

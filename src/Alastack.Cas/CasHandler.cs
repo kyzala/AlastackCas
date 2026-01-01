@@ -7,7 +7,7 @@ using Microsoft.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
 
-namespace Alastack.Authentication.Cas;
+namespace Alastack.Cas;
 
 /// <summary>
 /// Authentication handler for CAS based authentication.
@@ -28,8 +28,8 @@ public class CasHandler: RemoteAuthenticationHandler<CasOptions>
     /// Initializes a new instance of <see cref="CasHandler"/>.
     /// </summary>
     /// <inheritdoc />
-    public CasHandler(IOptionsMonitor<CasOptions> options, ILoggerFactory logger, UrlEncoder encoder, ISystemClock clock)
-        : base(options, logger, encoder, clock)
+    public CasHandler(IOptionsMonitor<CasOptions> options, ILoggerFactory logger, UrlEncoder encoder)
+        : base(options, logger, encoder)
     {            
     }
 
@@ -62,7 +62,7 @@ public class CasHandler: RemoteAuthenticationHandler<CasOptions>
         
         var identity = new ClaimsIdentity(ClaimsIssuer);
 
-        var authTicket = await CreateTicketAsync(identity, properties, ticket, state);
+        var authTicket = await CreateTicketAsync(identity, properties, ticket!, state!);
         if (authTicket != null)
         {
             return HandleRequestResult.Success(authTicket);
@@ -75,7 +75,8 @@ public class CasHandler: RemoteAuthenticationHandler<CasOptions>
     /// </summary>
     /// <param name="identity">The <see cref="ClaimsIdentity"/>.</param>
     /// <param name="properties">The <see cref="AuthenticationProperties"/>.</param>
-    /// <param name="ticket">The CAS ticket.</param>
+    /// <param name="ticket">The CAS ticket</param>
+    /// <param name="state">The CAS state value</param>
     /// <returns>The <see cref="AuthenticationTicket"/>.</returns>
     protected virtual async Task<AuthenticationTicket?> CreateTicketAsync(ClaimsIdentity identity, AuthenticationProperties properties, string ticket, string state)
     {
@@ -128,7 +129,7 @@ public class CasHandler: RemoteAuthenticationHandler<CasOptions>
         {
             cookie = "(not set)";
         }
-        Logger.HandleChallenge(location, cookie);
+        Logger.HandleChallenge(location!, cookie!);
     }
 
     /// <summary>

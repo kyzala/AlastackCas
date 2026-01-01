@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 using System.Xml;
 
-namespace Alastack.Authentication.Cas;
+namespace Alastack.Cas;
 
 /// <summary>
 /// The CAS 2.0/3.0 implementation of <see cref="ICasTicketValidator"/>.
@@ -25,12 +25,12 @@ public class Cas23TicketValidator : ICasTicketValidator
 
         var nsmgr = new XmlNamespaceManager(doc.NameTable);
         nsmgr.AddNamespace("cas", _ns);
-        var userNode = doc.DocumentElement.SelectSingleNode("/cas:serviceResponse/cas:authenticationSuccess/cas:user", nsmgr);
+        var userNode = doc.DocumentElement?.SelectSingleNode("/cas:serviceResponse/cas:authenticationSuccess/cas:user", nsmgr);
         if (userNode != null)
         {
             response.ResponseType = CasResponseType.ServiceValidate;
             response.UserName = userNode.InnerText;
-            var attributesNode = doc.DocumentElement.SelectSingleNode("/cas:serviceResponse/cas:authenticationSuccess/cas:attributes", nsmgr);
+            var attributesNode = doc.DocumentElement?.SelectSingleNode("/cas:serviceResponse/cas:authenticationSuccess/cas:attributes", nsmgr);
             if (attributesNode != null)
             {
                 foreach (XmlNode childNode in attributesNode.ChildNodes)
