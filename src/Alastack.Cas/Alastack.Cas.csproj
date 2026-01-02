@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<Version>1.1.0</Version>
+	<Version>1.2.0</Version>
 	<Authors>kyzala</Authors>
 	<Copyright>Copyright © 2023 kyzala</Copyright>
 	<PackageTags>Alastack;Auth;Authentication;Cas;AspNetCore</PackageTags>
