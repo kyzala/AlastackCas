@@ -7,7 +7,7 @@
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<Version>1.2.0</Version>
 	<Authors>kyzala</Authors>
-	<Copyright>Copyright © 2023 kyzala</Copyright>
+	<Copyright>Copyright © 2026 kyzala</Copyright>
 	<PackageTags>Alastack;Auth;Authentication;Cas;AspNetCore</PackageTags>
 	<PackageIcon>icon.png</PackageIcon>
 	<Description>A .NET client supports Central Authentication Service (CAS).</Description>
